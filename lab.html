@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Préstamos de Laboratorio</title>
+    <!-- Agrega el enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Agrega tu hoja de estilo personalizada (puedes crear un archivo CSS separado) -->
+    <style>
+        body {
+            background-color: #f2f2f2; /* Fondo gris perlado */
+            color: #000000; /* Color de letra negro */
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        .form-group label {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body class="container mt-4">
+
+    <h1 class="mb-4">Préstamos de Laboratorio</h1>
+
+    <form action="/prestar" method="post">
+        <div class="form-group">
+            <label for="nombre">Nombre del Docente:</label>
+            <input type="text" class="form-control" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="grado">Grado:</label>
+            <select class="form-control" name="grado" required>
+                <option value="PRIMERO">Primero</option>
+                <option value="SEGUNDO">Segundo</option>
+                <option value="TERCERO">Tercero</option>
+                <option value="CUARTO">Cuarto</option>
+                <option value="QUINTO">Quinto</option>
+                <option value="SEXTO">Sexto</option>
+                <option value="SEPTIMO">Séptimo</option>
+                <option value="OCTAVO">Octavo</option>
+                <option value="NOVENO">Noveno</option>
+                <option value="DECIMO">Décimo</option>
+                <option value="UNDECIMO">Undécimo</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tipo_laboratorio">Tipo de Laboratorio:</label>
+            <select class="form-control" name="tipo_laboratorio" required>
+                <option value="biologia">Biología</option>
+                <option value="quimica">Química</option>
+                <option value="fisica">Física</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha">Fecha y Hora de Préstamo:</label>
+            <input type="datetime-local" class="form-control" name="fecha" required>
+        </div>
+
+        <div class="form-group">
+            <label for="equipo">Equipo de Préstamo:</label>
+            <textarea class="form-control" name="equipo" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Prestar</button>
+    </form>
+
+    <!-- Agrega el enlace a Bootstrap JS y jQuery al final del cuerpo del documento -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
